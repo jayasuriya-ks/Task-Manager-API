@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS task_manager_db;
+
+USE task_manager_db;
+
+CREATE TABLE IF NOT EXISTS tasks (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    description TEXT NULL,
+    completed TINYINT(1) NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
+);
